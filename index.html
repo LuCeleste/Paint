@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="media/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<main>
+    <div class="texto">
+       <p>que tengas un lindo día!</p>
+    </div>
+    <div class="background">
+    </div>
+    <div class="ventana">
+        <img src="media/fb61e70c492df4c86e7c24bce9ea92ab.gif" alt="" srcset="">
+    </div>
+    <canvas id="canvas" width="380" height="280"></canvas>
+    <div class="controles">
+    <input type="color" name="" id="color" value="#a34d4d" oninput="defcolor(this.value);">
+    <input type="range" class="slider" name="" id="grosor" oninput="defgrosor(this.value);" min="1" max="4" value="2"  >
+    </div>
+    <div class="sonidos">
+        <audio id="player" src="./media/fuego.mp3"></audio>
+            <div class="botones"> 
+                Hogar
+                <button onclick="document.getElementById('player').play()">▶</button> 
+                <button onclick="document.getElementById('player').pause()">||</button> 
+              </div>
+              <audio id="playerUno" src="./media/rain.mp3"></audio>
+              <div class="botones"> 
+                    Lluvia
+                  <button onclick="document.getElementById('playerUno').play()">▶</button> 
+                  <button onclick="document.getElementById('playerUno').pause()">||</button>  
+                </div>
+                <audio id="playerDos" src="./media/lofi.mp3"></audio>
+                <div class="botones">
+                    Lo-fi 
+                    <button onclick="document.getElementById('playerDos').play()">▶</button> 
+                    <button onclick="document.getElementById('playerDos').pause()">||</button> 
+                  </div>
+    </div>
+</main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

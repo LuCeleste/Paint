@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Cutive Mono", monospace;
+  font-weight: 700;
+}
+
+.background {
+  background-color: transparent;
+  background-image: url("../media/fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.ventana {
+  position: absolute;
+  top: 40px;
+  left: 980px;
+  z-index: 0;
+}
+.ventana img {
+  width: 350px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 80%;
+}
+
+#canvas {
+  position: absolute;
+  top: 70px;
+  left: 515px;
+  z-index: 2;
+  background-color: white;
+}
+
+.controles {
+  position: absolute;
+  top: 390px;
+  left: 500px;
+  display: flex;
+  align-items: center;
+  background-color: #f7ddd7;
+  justify-content: space-around;
+  width: 400px;
+  height: 55px;
+  border-radius: 1.3rem;
+  z-index: 2;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 50%;
+  height: 5px;
+  background: #c2a290;
+  outline: none;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  border-radius: 2rem;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 2rem;
+  background: #a34d4d;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 2rem;
+  background: #ad758d;
+  cursor: pointer;
+}
+
+.sonidos {
+  position: absolute;
+  top: 550px;
+  display: flex;
+  flex-direction: column;
+  left: 1130px;
+  z-index: 2;
+}
+
+.botones {
+  border: solid 2px #be7175;
+  background-color: rgba(202, 174, 154, 0);
+  margin: 2px;
+  width: 150px;
+  font-size: 1.2rem;
+  color: #be7175;
+  padding: 2px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+button {
+  border: solid 2px #be7175;
+  border-radius: 2rem;
+  background-color: rgba(202, 174, 154, 0);
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #be7175;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #c2a290;
+}
+
+input[type=color i] {
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 0;
+  width: 40px;
+  height: 40px;
+}
+input[type=color i]:hover {
+  cursor: pointer;
+}
+
+.texto {
+  position: absolute;
+  top: 200px;
+  left: 140px;
+  z-index: 2;
+}
+.texto p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.texto p::before, .texto p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.texto p::before {
+  background-color: #ebe4de;
+  -webkit-animation: typewriter 6s steps(24) 1s forwards;
+          animation: typewriter 6s steps(24) 1s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+.texto p::after {
+  width: 0.1em;
+  background: rgba(0, 0, 0, 0.7490196078);
+  -webkit-animation: typewriter 6s steps(24) 1s forwards, blink 0.5s steps(24) infinite;
+          animation: typewriter 6s steps(24) 1s forwards, blink 0.5s steps(24) infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
