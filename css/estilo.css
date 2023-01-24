@@ -3,6 +3,14 @@
   margin: 0;
   font-family: "Cutive Mono", monospace;
   font-weight: 700;
+  background-color: transparent;
+}
+
+body {
+  background-image: url("../media/fb61e70c492df4c86e7c24bce9ea92ab.gif");
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
 }
 
 .background {
@@ -18,35 +26,31 @@
   z-index: 1;
 }
 
-.ventana {
-  position: absolute;
-  top: 40px;
-  left: 980px;
-  z-index: 0;
-}
-.ventana img {
-  width: 350px;
-  height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 80%;
-}
-
 #canvas {
   position: absolute;
-  top: 70px;
-  left: 515px;
+  top: 55px;
+  left: 70px;
+  background-color: #f7eae4;
+}
+
+.paint {
+  position: absolute;
+  top: 43px;
+  left: 482px;
+  background-image: url("../media/fondocanvas.png");
+  background-repeat: no-repeat;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   z-index: 2;
-  background-color: white;
 }
 
 .controles {
   position: absolute;
-  top: 390px;
+  top: 375px;
   left: 500px;
   display: flex;
   align-items: center;
-  background-color: #f7ddd7;
+  background-color: #f7eae4;
   justify-content: space-around;
   width: 400px;
   height: 55px;
@@ -139,17 +143,26 @@ input[type=color i]:hover {
 
 .texto {
   position: absolute;
-  top: 200px;
+  top: 115px;
   left: 140px;
+  background-image: url(../media/fondotexto.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-attachment: unset;
+  width: 310px;
+  height: 250px;
   z-index: 2;
 }
 .texto p {
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 60px;
+  margin-left: 10px;
 }
 .texto p::before, .texto p::after {
   content: "";
